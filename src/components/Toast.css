@@ -1,51 +1,87 @@
+/* /Users/shin-junwoo/슈퍼코딩/코드 설명/250804/src/components/Toast.css */
+
+/* 🚨 주의: 이 스타일은 App.css에도 동일하게 존재합니다. */
+/* 전체 페이지를 감싸는 wrapper 스타일 */
 .wrapper {
   background: #f1f1f1;
   width: 100vw;
   height: 100vh;
 }
 
+/* 개별 토스트 메시지 컴포넌트의 기본 스타일 (Block) */
 .toast {
+  /* 배경색을 흰색으로 설정합니다. */
   background: white;
+  /* 왼쪽에 1rem 두께의 회색 테두리를 주어 상태를 시각적으로 표시합니다. */
   border-left: 1rem solid #8a8a8a;
+  /* 모서리를 0.5rem 만큼 둥글게 만듭니다. */
   border-radius: 0.5rem;
+  /* 그림자 효과를 주어 입체감을 더합니다. */
   box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  /* 자식 요소(메시지, 버튼)를 가로로 배치하기 위해 flexbox를 사용합니다. */
   display: flex;
+  /* 자식 요소들을 양쪽 끝으로 정렬합니다. (메시지는 왼쪽, 버튼은 오른쪽) */
   justify-content: space-between;
+  /* 안쪽 여백을 1rem으로 설정합니다. */
   padding: 1rem;
+  /* 위아래 여백은 1rem, 좌우 여백은 auto로 설정하여 수평 중앙 정렬합니다. */
   margin: 1rem auto;
+  /* 너비를 25rem으로 고정합니다. */
   width: 25rem;
 }
 
+/* 토스트 메시지의 제목 스타일 (Element) */
 .toast__message-title {
+  /* 글자 두께를 굵게 설정합니다. */
   font-weight: bold;
+  /* 글자 크기를 1.25rem으로 설정합니다. */
   font-size: 1.25rem;
+  /* 아래쪽 여백을 0.5rem으로 설정합니다. */
   margin-bottom: 0.5rem;
+  /* 위쪽 여백을 제거합니다. (h 태그 등의 기본 여백 제거) */
   margin-top: 0;
+  /* 각 단어의 첫 글자를 대문자로 변환합니다. (e.g., "success" -> "Success") */
   text-transform: capitalize;
 }
 
+/* 토스트 메시지의 본문 텍스트 스타일 (Element) */
 .toast__message-text {
+  /* 아래쪽 여백을 제거합니다. (p 태그 등의 기본 여백 제거) */
   margin-bottom: 0;
 }
 
+/* 토스트 닫기 버튼 스타일 (Element) */
 .toast__button {
+  /* 배경을 투명하게 설정합니다. */
   background: transparent;
+  /* 테두리를 제거합니다. */
   border: none;
+  /* 부모 요소의 글꼴을 상속받습니다. */
   font-family: inherit;
+  /* 부모 요소의 글자 크기를 상속받습니다. */
   font-size: inherit;
+  /* 왼쪽 여백을 1rem 주어 메시지와의 간격을 만듭니다. */
   margin-left: 1rem;
+  /* 투명도를 50%로 설정합니다. */
   opacity: 0.5;
+  /* 안쪽 여백을 제거합니다. */
   padding: 0;
 }
 
+/* 'success' 상태의 토스트 스타일 (Modifier) */
 .toast-success {
+  /* 왼쪽 테두리 색상을 초록색으로 변경합니다. */
   border-color: #008554;
 }
 
+/* 'warning' 상태의 토스트 스타일 (Modifier) */
 .toast-warning {
+  /* 왼쪽 테두리 색상을 노란색으로 변경합니다. */
   border-color: #ffc627;
 }
 
+/* 'error' 상태의 토스트 스타일 (Modifier) */
 .toast-error {
+  /* 왼쪽 테두리 색상을 빨간색으로 변경합니다. */
   border-color: #d14229;
 }
